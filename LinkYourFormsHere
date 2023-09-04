@@ -1,0 +1,21 @@
+<!-- src/components/CodeForm.svelte -->
+
+<script>
+  let htmlCode = '';
+  let jsCode = '';
+  let cssCode = '';
+
+  async function handleSubmit() {
+    // Submit the code to your Supabase database
+    // You can use the Supabase client you initialized earlier
+    // Create a table in Supabase to store user-submitted code
+    // Insert the user's code into the table
+  }
+</script>
+
+<form on:submit={handleSubmit}>
+  <textarea bind:value={htmlCode} placeholder="HTML code"></textarea>
+  <textarea bind:value={jsCode} placeholder="JS code"></textarea>
+  <textarea bind:value={cssCode} placeholder="CSS code"></textarea>
+  <button type="submit">Submit</button>
+</form>
