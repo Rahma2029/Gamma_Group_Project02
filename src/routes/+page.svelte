@@ -1,11 +1,14 @@
 <script>
+    import Login from './Login.svelte';
+    // import Input  from './Input.svelte'
 	export let name;
 	//put your javascript in hee
 </script>
 
 <main>
 	<h1>Kangan Quiz</h1>
-	<p>INSERT STUFF HERE</p>
+    <Login />
+	
 </main>
 
 <style>
