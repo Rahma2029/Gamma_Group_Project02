@@ -1,5 +1,6 @@
 <script>
 	export let name;
+	//put your javascript in hee
 </script>
 
 <main>
