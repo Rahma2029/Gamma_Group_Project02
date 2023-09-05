@@ -2,8 +2,8 @@
 <script>
   import { supabase } from '../supabase';
 
-  let username = '';
-  let password = '';
+  let username = 'user';
+  let password = 'user123';
 
   async function loginUser() {
     try {
