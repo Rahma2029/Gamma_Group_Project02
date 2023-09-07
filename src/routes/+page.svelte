@@ -6,28 +6,36 @@
 
 		if (userType === 'Admin') {
 		await handleAdminLogin();
-		} else if (userType === 'User') {
+		} 
+		else if (userType === 'User') {
 		await handleUserLogin();
-		} else {
+		} 
+		else {
 		console.error('Invalid user type.');
-		}}   
+		}
+	}
 
 		import GitHubSignIn from "./GitHubSignIn.svelte";
-
+		import Navbar from './navbar.svelte';
 	// Call the handleLogin function when a login action occurs (e.g., button click)
 	/* async function handleLoginButtonClick() {
 		await handleLogin();
 	}*/
 	</script> 
 
-	<main>
+	
+
+
+<main>
+		<Navbar />
+
 		<h1>Kangan Quiz</h1>
 	<!--  <Login /> -->
 		<div>
 		<!-- Other content -->
 		<GitHubSignIn />
 		</div>
-		</main>
+	</main>
 
 	<style>
 	main {
