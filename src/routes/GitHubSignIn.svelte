@@ -15,7 +15,3 @@
 </script>
 
 <button on:click={signInWithGitHub}>Sign in with GitHub</button>
-
-
-
-  
