@@ -21,14 +21,13 @@
 	</script> 
 
 	<main>
-	<h1>Kangan Quiz</h1>
-   <!--  <Login /> -->
-    <div>
-	<!-- Other content -->
-	<GitHubSignIn />
-  </div>
-	
-	</main>
+		<h1>Kangan Quiz</h1>
+	<!--  <Login /> -->
+		<div>
+		<!-- Other content -->
+		<GitHubSignIn />
+		</div>
+		</main>
 
 	<style>
 	main {
