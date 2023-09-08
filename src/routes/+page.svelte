@@ -23,6 +23,21 @@ let password = '';
     }
 });
 
+    //USER SIGN IN FUNCTION
+	async function handleLogin() {
+		const userType = 'Admin'; // Replace with your logic to determine the user type
+
+		if (userType === 'Admin') {
+		await handleAdminLogin();
+		} 
+		else if (userType === 'User') {
+		await handleUserLogin();
+		} 
+		else {
+		console.error('Invalid user type.');
+		}
+	}
+
 	// GITHUB SIGN IN FUNCTION
 	async function signInGitHub() {
     console.log("signInGitHub");
