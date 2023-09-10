@@ -1,15 +1,23 @@
 <script>
 	import { createClient } from '@supabase/supabase-js'
 	import { onMount } from 'svelte';
+	import Navbar from './navbar.svelte';
+
 
 	const supabaseUrl = 'https://spcbocsicbrcuctlwwqc.supabase.co'
 	const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNwY2JvY3NpY2JyY3VjdGx3d3FjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTMyODQ3NTEsImV4cCI6MjAwODg2MDc1MX0.jK2FAWoHlw6YkDRxuNKWfEeAZYh_OGOjSDkWJqOW2J4'
 	const supabase = createClient(supabaseUrl, supabaseKey)
 
+
+//NAVBAR IMAGES
+	let kangLogoUrl = 'https://spcbocsicbrcuctlwwqc.supabase.co/storage/v1/object/sign/Images/KanganIcon.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvS2FuZ2FuSWNvbi5wbmciLCJpYXQiOjE2OTQzMTI0MzUsImV4cCI6MTcyNTg0ODQzNX0.IbCBVJB-N7x0tmmwFERt3aTVWswBbf1bv2k1IYJRXWQ&t=2023-09-10T02%3A20%3A35.112Z';
+
+	let vicLogoUrl = 'https://spcbocsicbrcuctlwwqc.supabase.co/storage/v1/object/sign/Images/tafe_vic.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvdGFmZV92aWMucG5nIiwiaWF0IjoxNjk0MzE0NTkwLCJleHAiOjE3MjU4NTA1OTB9.ECX_cDtQ7R9WbICaD0UDTWzjwDxgpcuatQitjqeYRr4&t=2023-09-10T02%3A56%3A30.325Z';
+
 //LOGIN INPUTS
 
-let username = '';
-let password = '';
+	let username = '';
+	let password = '';
 
 //ON MOUNT SYNC
 	onMount(async () => {
@@ -61,7 +69,7 @@ async function signout() {
     user = null;
 }
  
-		import Navbar from './navbar.svelte';
+
 	// Call the handleLogin function when a login action occurs (e.g., button click)
 	/* async function handleLoginButtonClick() {
 		await handleLogin();
@@ -69,10 +77,15 @@ async function signout() {
 	</script> 
 
 <main>
-		<Navbar />
+<!-- NAVBAR & LOGOS-->
+	<div>
+		<Navbar kangLogoUrl={kangLogoUrl} vicLogoUrl={vicLogoUrl} />
+	</div>
 
-		<h1>Kangan Quiz</h1>
-	<!--  <Login /> -->
+<!-- HEADER -->
+	<h1>Kangan Quiz</h1>
+<!-- LOGIN -->
+
 		<div>
 		<!-- Other content -->
 		<input type="text" placeholder="Username" bind:value="{username}" />

@@ -1,6 +1,6 @@
 <script>
-    export let kangLogoSrc = "Kangan_logo.png";
-    export let vicLogoSrc = "tafe_vic.png";
+    export let kangLogoUrl;
+    export let vicLogoUrl;
 </script>
   
 <style>
@@ -25,7 +25,10 @@
 </style>
   
   <div class="navbar">
-    <img id="kangLogo" src={kangLogoSrc} alt="Kangan Logo">
-    <img id="vicLogo" src={vicLogoSrc} alt="Tafe Victoria Logo">
+    <a href="https://www.kangan.edu.au/campus/cremorne/creative-digital-skills-campus">
+      <img id="kangLogo" src={kangLogoUrl} alt="Kangan Logo" />
+    </a>
+    <a href="https://tafe.educationapps.vic.gov.au/s/">
+    <img id="vicLogo" src={vicLogoUrl} alt="Tafe Victoria Logo">
+    </a>
   </div>
-  
